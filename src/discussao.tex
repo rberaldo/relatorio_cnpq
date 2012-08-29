@@ -1,0 +1,123 @@
+\pagebreak
+\chapter{Discussão}
+
+% Introdução à terminologia
+Na busca de um synset do português que seja conceitualmente equivalente ao do
+inglês, nem sempre ocorre um alinhamento direto, devido às especificidades de
+cada uma das línguas e, sobretudo, às lacunas lexicais que são constatadas
+durante o processo de análise.
+
+%\enlargethispage{\baselineskip}
+Segundo~\citeonline{peters}, há seis tipos de relações interlinguais. O
+alinhamento direto é chamado~\eqsyn. As outras relações mais importantes
+são~\cite[p.~225, tradução livre]{peters}:
+
+	\begin{itemize}
+        \item \eqnsyn\ quando um sentido corresponde a vários \ili s
+          simultaneamente;
+        \item \eqhyper\ quando um sentido é mais específico que qualquer \ili\
+          disponível;
+        \item \eqhypo\ quando um sentido pode ser ligado apenas a \ili s mais
+          específicos.
+	\end{itemize}
+
+% Exemplos de alinhamento direto
+Exemplo de \eqsyn\ é o synset da \wnpr\ \synset{\en{bread knife}}, que se
+alinha diretamente com o synset da \wnbr\ \synset{faca de pão}. Nesse caso,
+verificamos que as duas línguas --- o inglês norte-americano e o português
+brasileiro --- revestem lexicalmente o mesmo conceito de uma faca especial para
+cortar pães. Mesmo que esse tipo de alinhamento pareça bastante simples,
+existem algumas questões a serem levantadas. Algumas são de cunho linguístico e
+se relacionam às especificidades de cada língua, como no caso do synset
+\synset{\en{brush2}} da \wnpr. Nesse caso, o synset preenche lexicalmente um
+``utensílio que tem pelos ou cerdas firmemente presas a um cabo''. Em português
+brasileiro, existem ao menos dois possíveis synsets que se encaixam nessa
+descrição: \synset{escova} e \synset{pincel}. A dificuldade deriva do fato que,
+em português, o conceito é bipartido em função do uso das escovas e pincéis;
+podemos pensar que escovas \emph{limpam} ao passo que pincéis \emph{espalham}
+(tinta, claras de ovos etc.). No inglês, essa diferenciação ocorre nos termos
+\textit{\en{cleaning brush}} e \textit{\en{paint brush}}, ambos \emph{tipos} de
+\en{\textit{brushes}}.
+
+Outro tipo de problema decorre de possíveis problemas na formação dos synsets
+da \wnpr. Esse é o caso de \synset{\en{bitmap, electronic image}}. Aqui é
+necessária a compreensão técnica do termo “\en{\textit{bitmap}}”.
+Segundo~\cite{wiki_bitmap}:
+
+\begin{quote}
+  [\ldots]~\en{bitmap or pixmap is a type of memory organization or image file
+    format used to store digital images. The term bitmap comes from the computer
+    programming terminology, meaning just a map of bits, a spatially mapped array
+  of bits.}
+\end{quote}
+
+O problema é, portanto, que \en{\textit{bitmap}} é um \emph{tipo} de imagem
+digital. Acreditamos que, por esse motivo, \synset{\en{bitmap}} deveria ser um
+hipônimo de \synset{\en{electronic image}}.
+
+Finalmente, alguns synsets são, por natureza, impossíveis de serem alinhados
+por~\eqsyn. É o caso dos synsets \synset{\en{britches}} (termo informal para
+\en{\textit{breeches}}, “calção”), \synset{\en{boot2}} (termo britânico para
+“porta-malas”) e \synset{\en{burthen}} (termo informal para
+\en{\textit{burden}}, “fardo”). Esses synsets apresentam variações no registro
+(formal, informal, norte-americano, britânico) do inglês que não dizem respeito
+ao conceito que preenchem. Para efeito de comparação, embora o termo “Sampa”
+seja informal para “São Paulo”, ambas as palavras preenchem lexicalmente o
+mesmo conceito --- o da capital do Estado de São Paulo --- e devem, por esse
+motivo, formar um mesmo synset.
+
+% Explicação do alinhamento por hiperonímia
+O alinhamento por~\eqnsyn\ se dá quando um sentido pode se alinhar a múltiplos
+sentidos na WN.Pr. Já o alinhamento por~\eqhyper\ acontece quando um conceito
+falta no inglês ou na WN.Pr, como ilustrado na figura~\ref{caipirosca}.
+
+	\tikzstyle{normal}=[circle,text=white,fill=black]
+	\tikzstyle{superset}=[normal,inner sep=1em]
+
+	\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture}[scale=2]
+	    \matrix [column sep=3em,row sep=1em]
+	    {
+	    \node (a) [normal] {WN.Br}; & \node (b) [superset] {WN.Pr}; \\
+	    \node (a caption) {\parbox{2cm}{\centering\textbf{\{caipirosca\}}\\\small\textit{``tipo de capirinha, onde vodka é utilizada ao invés de cachaça''}}}; & \node (b caption) {\parbox{2cm}{\centering\textbf{\{vodka\}}\\\small\textit{``unaged colorless liquor originating in Russia''}}};\\
+	    };
+	    \begin{pgfonlayer}{background}
+		\fill (a.center) -- (b.north east) -- (b.south east) -- (a.center);
+	    \end{pgfonlayer}
+	\end{tikzpicture}
+	\caption{Relação do tipo \eqhyper. Adaptado de~\citeonline{debora}.}
+	\label{caipirosca}
+	\end{figure}
+
+% Explicação do alinhamento por hiponímia
+Quando a wordnet de Princeton apresenta um synset mais específico do que o
+presente na wordnet a ser alinhada, acontece o alinhamento por~\eqhypo. O
+exemplo dado por~\citeonline{debora} é representado na figura~\ref{dedo}.
+
+	\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[scale=2]
+	    \matrix [column sep=3em,row sep=1em]
+	    {
+	    & \node (b caption) {\parbox{3cm}{\centering\textbf{\{finger\}}\\\small\textit{``any of the terminal members of the hand (sometimes excepting the thumb)''}}};  \\
+	    \node (a) [superset] {WN.Br}; & \node (b) [normal] {WN.Pr}; \\
+	    \node (a caption) {\parbox{3cm}{\centering\textbf{\{dedo\}}\\\small\textit{``cada um dos cinco prolongamentos articulados que terminam as mãos e os pés do homem''}}}; & \node (b caption) {\parbox{3cm}{\centering\textbf{\{toe\}}\\\small\textit{``one of the digits of the foot''}}};\\
+	    };
+	    \begin{pgfonlayer}{background}
+		\fill (b.center) -- (a.north east) -- (a.south east) -- (b.center);
+	    \end{pgfonlayer}
+	\end{tikzpicture}
+	\caption{Relação do tipo \eqhypo. Adaptado de~\citeonline{debora}.}
+	\label{dedo}
+	\end{figure}
+
+Embora o alinhamento por~\eqsyn\ seja o mais abundante em termos absolutos, o
+alinhamento por~\eqhypo\ ocorre em grande número. Dos 500 synsets analisados
+nos últimos doze meses de trabalho, aproximadamente 150~deles ($\approx$~30\%)
+apresentam esse alinhamento. Exemplo desse tipo de alinhamento é o synset
+da~\wnbr\ \synset{bomba guiada por laser, bomba inteligente}, que se alinha por
+\eqhypo\ ao synset da \wnpr\ \synset{\en{Bunker Buster, Guided Bomb Unit-28,
+GBU-28}}, que representa um tipo específico de bomba guiada por laser. Também
+\synset{arado} foi alinhado dessa maneira a~\synset{\en{bull tongue}}, um tipo
+de arado pesado usado em plantações de algodão.

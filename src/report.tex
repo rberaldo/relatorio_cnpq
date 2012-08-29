@@ -1,0 +1,88 @@
+\documentclass[a4paper,oneside,article]{memoir}
+\usepackage{fontspec}
+  \setmainfont[Numbers=OldStyle,Ligatures=TeX]{Linux Libertine}
+\usepackage[english,portuguese]{babel}
+\usepackage{microtype,enumerate,graphicx,tikz,xtab,multirow,booktabs,array,pdfpages}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{mindmap,backgrounds}
+\usepackage[alf,abnt-etal-list=4]{abntcite}
+
+%% Faz referências etc.
+\makeindex
+
+%% Estilos: capítulo e página
+\chapterstyle{article}
+\makepagestyle{plain}
+  \makeevenfoot{plain}{\thepage}{}{}
+  \makeoddfoot{plain}{\thepage}{}{}
+\pagestyle{plain}
+
+%% Abreviações comuns
+\newcommand{\unesp}{\textsc{unesp}}
+\newcommand{\pibic}{\textsc{pibic}}
+\newcommand{\celic}{\textsc{CELiC}}
+\newcommand{\cnpq}{\textsc{cnp}q}
+\newcommand{\icmc}{\textsc{icmc}}
+\newcommand{\usp}{\textsc{usp}}
+\newcommand{\nilc}{\textsc{nilc}}
+\newcommand{\wnpr}{WN.Pr}
+\newcommand{\wnbr}{WN.Br}
+\newcommand{\eqsyn}{\textsc{eq\_syn\-o\-nym}}
+\newcommand{\eqnsyn}{\textsc{eq\_near\_syn\-o\-nym}}
+\newcommand{\eqhyper}{\textsc{eq\_has\_hyp\-ero\-nym}}
+\newcommand{\eqhypo}{\textsc{eq\_has\_hyp\-o\-nym}}
+\newcommand{\ili}{\textsc{ili}}
+\newcommand{\en}[1]{\foreignlanguage{english}{#1}}
+
+% Synset
+\newcommand{\synset}[1]{\{~\textit{#1}~\}}
+
+\begin{document}
+\frenchspacing
+%\OnehalfSpacing
+
+%% Capa
+  \begin{flushleft}
+  {\large
+  Programa \pibic/\cnpq/\unesp\\
+  \textbf{Relatório Final}\\}
+  (De 1\textordmasculine\ de março de~2011 a 31 de julho de 2012)\\
+  \end{flushleft}
+
+  \begin{flushright}
+  Rafael Luis Beraldo\\
+  {\small Bolsista}
+
+  \vspace{1em}
+
+  Bento Carlos Dias-da-Silva\\
+  {\small Orientador}
+  \end{flushright}
+
+%% Citando
+\nocite{cruse,bento,bentoetal,eurowordnet,fellbaum,ferreira,flexner,handke,houaissweb,houaiss,levin,marrafa,miller,saint,scott,taylor,vossen,weiszflog,wordnet,git,riemer,vossenetal}
+
+%% Documento em si
+\input{intro}
+\input{objetivos}
+\input{metodologia}
+\input{resultados}
+\input{discussao}
+\input{atividades}
+\input{conclusao}
+
+%% E a bibliografia
+\bibliography{bibliography}
+
+% %% Apêndices e Anexos
+% \renewcommand{\chaptername}{Annex}
+% % Incluindo as tabelas de synset
+% \include{synset_table_fase0}
+% \include{synset_table_fase1}
+% % Incluindo os planos de atividade
+% \include{plano_atividades_fase0}
+% \include{plano_atividades_fase1}
+
+\end{document}
+
+% vim: set tw=0: %
