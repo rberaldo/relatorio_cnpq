@@ -21,6 +21,7 @@ $(DOC).pdf:
 	$(TEX) $(DOC).tex
 	makeindex $(DOC).idx
 	$(TEX) $(DOC).tex
+	mv $(DOC).pdf ../bin/
 
 clean:
 	$(RM) $(DOC).aux $(DOC).log
@@ -32,18 +33,9 @@ clean:
 	$(RM) $(DOC).tex.backup
 	$(RM) $(DOC).tex.bak
 	$(RM) $(DOC).bbl
-	$(RM) $(DOC).pdf
+	$(RM) ../bin/$(DOC).pdf
 	$(RM) $(DOC).tex~
 	$(RM) $(DOC).bib~
 	$(RM) Makefile~
 	$(RM) *.ind *.ilg *.idx *.aux
 	$(RM) texput.log core
-
-show:	$(DOC).pdf
-	evince $(DOC).pdf
-
-shownew:	clean	$(DOC).pdf
-		evince $(DOC).pdf
-
-simple:
-	$(TEX) $(DOC).tex
