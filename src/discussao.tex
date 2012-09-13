@@ -25,19 +25,21 @@ são~\cite[p.~225, tradução livre]{peters}:
 Exemplo de \eqsyn\ é o synset da \wnpr\ \synset{\en{bread knife}}, que se
 alinha diretamente com o synset da \wnbr\ \synset{faca de pão}. Nesse caso,
 verificamos que as duas línguas --- o inglês norte-americano e o português
-brasileiro --- revestem lexicalmente o mesmo conceito de uma faca especial para
-cortar pães. Mesmo que esse tipo de alinhamento pareça bastante simples,
-existem algumas questões a serem levantadas. Algumas são de cunho linguístico e
-se relacionam às especificidades de cada língua, como no caso do synset
-\synset{\en{brush2}} da \wnpr. Nesse caso, o synset preenche lexicalmente um
-``utensílio que tem pelos ou cerdas firmemente presas a um cabo''. Em português
-brasileiro, existem ao menos dois possíveis synsets que se encaixam nessa
-descrição: \synset{escova} e \synset{pincel}. A dificuldade deriva do fato que,
-em português, o conceito é bipartido em função do uso das escovas e pincéis;
-podemos pensar que escovas \emph{limpam} ao passo que pincéis \emph{espalham}
-(tinta, claras de ovos etc.). No inglês, essa diferenciação ocorre nos termos
-\textit{\en{cleaning brush}} e \textit{\en{paint brush}}, ambos \emph{tipos} de
-\en{\textit{brushes}}.
+brasileiro --- revestem lexicalmente o mesmo conceito \textsc{faca especial
+  para cortar pães}.
+
+Mesmo que esse tipo de alinhamento pareça bastante simples, existem algumas
+questões a serem levantadas. Algumas são de cunho linguístico e se relacionam
+às especificidades de cada língua, como no caso do synset \synset{\en{brush2}}
+da \wnpr. Nesse caso, o synset reveste lexicalmente o conceito
+\textsc{utensílio que tem pelos ou cerdas firmemente presas a um cabo}. No
+português brasileiro, existem ao menos dois possíveis synsets que revestem o
+mesmo conceito: \synset{escova} e \synset{pincel}. A dificuldade deriva do fato
+que, em português, o conceito é bipartido em função do uso das escovas e
+pincéis; podemos pensar que escovas \emph{limpam} ao passo que pincéis
+\emph{espalham} (tinta, claras de ovos etc.). No inglês, essa diferenciação
+conceitual é lexicalizada por synsets contendo itens léxicos complexos:
+\synset{\en{cleaning brush}} e \synset{\en{paint brush}}.
 
 Outro tipo de problema decorre de possíveis problemas na formação dos synsets
 da \wnpr. Esse é o caso de \synset{\en{bitmap, electronic image}}. Aqui é
@@ -51,9 +53,10 @@ Segundo~\cite{wiki_bitmap}:
   of bits.}
 \end{quote}
 
-O problema é, portanto, que \en{\textit{bitmap}} é um \emph{tipo} de imagem
-digital. Acreditamos que, por esse motivo, \synset{\en{bitmap}} deveria ser um
-hipônimo de \synset{\en{electronic image}}.
+A dificuldade está, portanto, na concepção de \textit{\en{bitmap}} enquanto um
+tipo de imagem digital. Acreditamos que, por esse motivo, o synset
+\synset{\en{bitmap}} deve ser registrado como um hipônimo de
+\synset{\en{electronic image}}.
 
 Finalmente, alguns synsets são, por natureza, impossíveis de serem alinhados
 por~\eqsyn. É o caso dos synsets \synset{\en{britches}} (termo informal para
@@ -61,15 +64,16 @@ por~\eqsyn. É o caso dos synsets \synset{\en{britches}} (termo informal para
 “porta-malas”) e \synset{\en{burthen}} (termo informal para
 \en{\textit{burden}}, “fardo”). Esses synsets apresentam variações no registro
 (formal, informal, norte-americano, britânico) do inglês que não dizem respeito
-ao conceito que preenchem. Para efeito de comparação, embora o termo “Sampa”
+ao conceito que lexicalizam. Para efeito de comparação, embora o termo “Sampa”
 seja informal para “São Paulo”, ambas as palavras preenchem lexicalmente o
 mesmo conceito --- o da capital do Estado de São Paulo --- e devem, por esse
 motivo, formar um mesmo synset.
 
 % Explicação do alinhamento por hiperonímia
-O alinhamento por~\eqnsyn\ se dá quando um sentido pode se alinhar a múltiplos
-sentidos na WN.Pr. Já o alinhamento por~\eqhyper\ acontece quando um conceito
-falta no inglês ou na WN.Pr, como ilustrado na figura~\ref{caipirosca}.
+Como já se definiu, o alinhamento por~\eqnsyn\ se dá quando o synset do
+português corresponde a vários~\ili s simultaneamente. Já o alinhamento
+por~\eqhyper, quando o synset do português tem sentido mais específico que
+qualquer~\ili\ disponível, como ilustrado na figura~\ref{caipirosca}.
 
 	\tikzstyle{normal}=[circle,text=white,fill=black]
 	\tikzstyle{superset}=[normal,inner sep=1em]
@@ -92,8 +96,8 @@ falta no inglês ou na WN.Pr, como ilustrado na figura~\ref{caipirosca}.
 
 % Explicação do alinhamento por hiponímia
 Quando a wordnet de Princeton apresenta um synset mais específico do que o
-presente na wordnet a ser alinhada, acontece o alinhamento por~\eqhypo. O
-exemplo dado por~\citeonline{debora} é representado na figura~\ref{dedo}.
+presente na \wnbr , temos, por fim, o alinhamento por~\eqhypo, exemplificado na
+figura~\ref{dedo}.
 
 	\begin{figure}[h]
 	\centering
@@ -113,11 +117,11 @@ exemplo dado por~\citeonline{debora} é representado na figura~\ref{dedo}.
 	\end{figure}
 
 Embora o alinhamento por~\eqsyn\ seja o mais abundante em termos absolutos, o
-alinhamento por~\eqhypo\ ocorre em grande número. Dos 500 synsets analisados
-nos últimos doze meses de trabalho, aproximadamente 150~deles ($\approx$~30\%)
-apresentam esse alinhamento. Exemplo desse tipo de alinhamento é o synset
-da~\wnbr\ \synset{bomba guiada por laser, bomba inteligente}, que se alinha por
-\eqhypo\ ao synset da \wnpr\ \synset{\en{Bunker Buster, Guided Bomb Unit-28,
-GBU-28}}, que representa um tipo específico de bomba guiada por laser. Também
-\synset{arado} foi alinhado dessa maneira a~\synset{\en{bull tongue}}, um tipo
-de arado pesado usado em plantações de algodão.
+alinhamento por~\eqhypo\ ocorre com grande frequência. Dos~500 synsets
+analisados nos últimos doze meses da bolsa, aproximadamente 150~deles
+($\approx$~30\%) apresentam esse alinhamento. Exemplo desse tipo de alinhamento
+é o synset da~\wnbr\ \synset{bomba guiada por laser, bomba inteligente}, que se
+alinha por \eqhypo\ ao synset da \wnpr\ \synset{\en{Bunker Buster, Guided Bomb
+Unit-28, GBU-28}}, que representa um tipo específico de bomba guiada por laser.
+O synset \synset{arado} foi alinhado dessa maneira a~\synset{\en{bull tongue}},
+um tipo de arado pesado usado em plantações de algodão.

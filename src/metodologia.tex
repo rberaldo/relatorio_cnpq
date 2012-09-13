@@ -19,12 +19,12 @@ suprida com o estudo dos textos da Bibliografia Básica.
 Destacamos alguns textos fundamentais, como~\citeonline{fellbaum}, que descreve
 minuciosamente a WN.Pr, e~\citeonline{vossen}, uma edição especial do periódico
 \en{\textit{Computers and the Humanities}}, que discute as dificuldades e
-estratégias na construção da EuroWordNet, uma mega-WordNet que associa
-diferentes wordnets em construção para as línguas da União Européia. Incluímos
-nessa lista~\citeonline{riemer}, que fornece o embasamento teórico que precedeu
-àquele dos textos acima, discutindo teorias e conceitos da semântica (grasso e
-lexical) que se provaram bastante úteis na compreensão das wordnets, em
-especial o capítulo~8.
+estratégias na construção da EuroWordNet, uma mega-WordNet multilíngue que
+associa diferentes wordnets em construção para as línguas da União Européia.
+Incluímos nessa lista~\citeonline{riemer}, que fornece o embasamento teórico
+que precedeu àquele dos textos acima, discutindo teorias e conceitos da
+semântica (grasso e lexical) que se provaram bastante úteis na compreensão das
+wordnets, em especial o capítulo~8.
 
 \section{Estratégias de execução}
 
@@ -32,9 +32,8 @@ De acordo com os fundamentos teóricos fornecidos pela Bibliografia Básica, par
 cada synset selecionado da base da WN.Br, após análise léxico-semântica,
 propõe-se uma glosa.
 
-A metodologia aplicada neste primeiro mês de pesquisa apresentou grande
-eficiência, o que diminui a probabilidades de que algum procedimento seja
-alterado até julho.
+A metodologia adotada apresentou grande eficiência, o que tornou desnecessária a
+modificação dos procedimentos ao longo dos trabalhos.
 
 Procedimentos:
 	
@@ -74,7 +73,7 @@ Procedimentos:
     apropriada para especificar o alinhamento conceitual que resulta da
     análise: alinhamento por \eqsyn, por \eqnsyn, por \eqhypo\ ou por \eqhyper.
 
-  \item Cria-se a glosa para o synset do português em construçao, com base na
+  \item Cria-se a glosa para o synset do português em construção, com base na
     glosa já existente para o synset do inglês, quando esta já estiver
     especificada no synset do inglês.
 
@@ -143,7 +142,7 @@ versões de arquivos~\cite{chacon}, que deve viabilizar:
   \item A consolidação da base da~\wnbr.
 \end{enumerate}
 
-Um Sistema de Controle de Versões~(SCV) resolve todos esses problemas,
+Cumpre destacar que um Sistema de Controle de Versões~(SCV) resolve todos esses problemas,
 permitindo ao usuário reverter seus arquivos a um estado anterior, reverter o
 projeto inteiro a um estado anterior, comparar as mudanças ao longo do tempo,
 ver quem foi o último a modificar os arquivos, e recuperar arquivos que foram
@@ -162,13 +161,14 @@ Durante reuniões no final de~2010 e início de~2011, foram discutidos os
 detalhes iniciais para a implementação do Git~\cite[p.~4]{beraldo11}. O Git foi
 implementado e testado, usando um servidor cedido pelo~\nilc, no~\icmc\
 (Instituto de Ciências Matemáticas e Computação) da \usp\ de São Carlos. Em
-reunião no início do mês de~agosto, foi decidido que o repositório
-da~WordNet.Br será movido do atual servidor de acesso privado no~\nilc\ para o
-servidor de acesso público no~GitHub\footnote{\url{https://github.com/}}. Esse
-movimento busca promover a divulgação do projeto e dos resultados obtidos até o
-momento, bem como promover a comunicação entre os pesquisadores e demais
-interessados. A figura~\ref{github:repositorio} apresenta a interface de um
-repositório configurado no~GitHub.
+reunião no final de julho, foi decidido o deslocamento do repositório
+da~WordNet.Br do atual servidor, que é de acesso privado no~\nilc, para o
+servidor de acesso público no~GitHub\footnote{\url{https://github.com/}}. Essa
+iniciativa busca promover a divulgação do projeto e, sobretudo, dos resultados,
+à medida que forem sendo consolidados, bem como promover a comunicação entre os
+pesquisadores e demais interessados na construção e uso da~WordNet.Br. A
+figura~\ref{github:repositorio} mostra a interface de um repositório
+configurado no~GitHub.
 
 %% Imagem da interface geral de um repositório no GitHub
 \begin{figure}[h]
@@ -178,18 +178,18 @@ repositório configurado no~GitHub.
   \label{github:repositorio}
 \end{figure}
 
-É possível adicionar pessoas a um projeto, para que possam contribuir
-ativamente; o único prerrequisito é que possuam uma conta no GitHub. Também é
-possível aceitar alterações e melhorias em geral (\en{\textit{“pull
+No GitHub, é possível adicionar pessoas a um projeto, para que possam
+contribuir ativamente; o único pré-requisito é que possuam uma conta no GitHub.
+Também é possível aceitar alterações e melhorias em geral (\en{\textit{“pull
 requests”}}) de outros usuários do GitHub. Desse modo, tem-se o controle de
-quem fez uma modificação ou adição, ou mesmo deleção, quando foi feita e por
-qual motivo. O sistema do GitHub também permite que usuários copiem para suas
-contas o estado atual do projeto sem que nenhuma modificação seja feita nos
-arquivos originais. Usuários não cadastrados também podem fazer uma cópia local
-dos arquivos. Em nenhum desses casos há a possibilidade de alteração da base
-por pessoas não autorizadas.
+quem fez uma modificação ou adição, ou mesmo apagamento de informações e
+arquivos, quando foi feita e por qual motivo. O sistema do GitHub também
+permite que usuários copiem para suas contas o estado atual do projeto sem que
+nenhuma modificação seja feita nos arquivos originais. Usuários não cadastrados
+também podem fazer uma cópia local dos arquivos. Em nenhum desses casos há a
+possibilidade de alteração da base por pessoas não autorizadas.
 
-Além disso, o GitHub possui servido de Wiki~(figura~\ref{github:wiki}) e um
+Além disso, o GitHub possui um serviço de Wiki~(figura~\ref{github:wiki}) e um
 sistema de comunicação de \en{\textit{bugs}}, ou seja, erros ou problemas
 (figura~\ref{github:bugtracker}).
 
@@ -221,6 +221,7 @@ tradicionais, como a linha de comando, aos mais amigáveis para o usuário, como
 os clientes fornecidos pelo GitHub\footnote{Cliente para Windows disponível em
 \url{http://windows.github.com/} e para Mac em \url{http://mac.github.com/}}.
 
-Com a adoção do sistema de controle de versões Git, espera-se a agilização da
-construção, do armazenamento, da revisão e da atualização da base da~\wnbr\ e,
-sobretudo, a sua disponibilização e as suas atualizações.
+Com a adoção do sistema de controle de versões Git e do servidor de acesso
+público do GitHub, espera-se maior agilização da construção, do armazenamento,
+da revisão e da atualização da base da~\wnbr\ e, sobretudo, a sua
+disponibilização para os usuários e as suas periódicas atualizações.
