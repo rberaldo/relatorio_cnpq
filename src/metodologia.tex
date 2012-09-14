@@ -3,18 +3,17 @@
 Nessa seção listaremos os fundamentos teórico-aplicados utilizados na análise
 dos synsets, bem como elucidaremos as estratégias e convenções dessa análise.
 Esses dois aspectos da metodologia do projeto permitem o estabelecimento de um
-estilo padrão para os synsets da WordNet.Br. Também discutiremos, na sequência,
-a implementação do Git~\cite{git}, software que foi selecionado para otimizar o
+estilo padrão para os synsets da \wnbr. Também discutiremos, na sequência, a
+implementação do Git~\cite{git}, software que foi selecionado para otimizar o
 armazenamento e o gerenciamento dos diferentes tipos de arquivo que são gerados
-na execução das atividades de construção da WordNet.Br.
+na execução das atividades de construção da \wnbr.
 
 \section{Metodologia de base}
 
 Antes que qualquer análise de synsets seja feita, é necessário compreender os
-aspectos teóricos por trás da WordNet de Princeton (doravante WN.Pr), produzida
-para o inglês norte-americano, os pressupostos para o alinhamento de wordnets e
-as particularidades da WordNet.Br (doravante WN.Br). Essa necessidade foi
-suprida com o estudo dos textos da Bibliografia Básica.
+aspectos teóricos por trás da \wnpr, produzida para o inglês norte-americano,
+os pressupostos para o alinhamento de wordnets e as particularidades da \wnbr.
+Essa necessidade foi suprida com o estudo dos textos da Bibliografia Básica.
 
 Destacamos alguns textos fundamentais, como~\citeonline{fellbaum}, que descreve
 minuciosamente a WN.Pr, e~\citeonline{vossen}, uma edição especial do periódico
@@ -44,7 +43,7 @@ Procedimentos:
       \item \texttt{06artifact(11256).doc};
       \item Arquivo modelo para posterior indexação (\texttt{.txt});
       \item WordNet 2.0;
-      \item Editor da WordNet.Br;
+      \item Editor da \wnbr;
       \item Dicionários de inglês/inglês e inglês/português;
       \item Navegador de internet com acesso ao córpus (\nilc) e à
         ferramentas de busca (Google, AltaVista, Yahoo).
@@ -55,7 +54,11 @@ Procedimentos:
     tipo~\texttt{06artifact(11256).doc} e localiza-se esse synset na base da
     WN.Pr; todo seu conteúdo (o synset e todas as informações associadas a ele,
     incluindo todos os seus hiperônimos) é copiado para o arquivo modelo em
-    \texttt{.txt}.
+    \texttt{.txt}. Cada synset da~\wnpr\ constitui um \ili\
+    (\en{Inter-Ligual-Index}), ou seja, um indexador que se alinha (associa) a
+    um ou mais synsets conceitualmente equivalentes do português e funciona
+    como elo de ligação (indexado, portanto) a synsets conceitualmente
+    equivalentes de outras línguas.
 
   \item\label{analise_synset} Copia-se o synset do português semanticamente
     equivalente ao inglês, se ele já existir na base da WN.Br, para o arquivo
@@ -148,12 +151,12 @@ Durante reuniões no final de~2010 e início de~2011, foram discutidos os
 detalhes iniciais para a implementação do Git~\cite[p.~4]{beraldo11}. O Git foi
 implementado e testado, usando um servidor cedido pelo~\nilc, no~\icmc\
 (Instituto de Ciências Matemáticas e Computação) da \usp\ de São Carlos. Em
-reunião no final de julho, foi decidido o deslocamento do repositório
-da~WordNet.Br do atual servidor, que é de acesso privado no~\nilc, para o
-servidor de acesso público no~GitHub\footnote{\url{https://github.com/}}. Essa
-iniciativa busca promover a divulgação do projeto e, sobretudo, dos resultados,
-à medida que forem sendo consolidados, bem como promover a comunicação entre os
-pesquisadores e demais interessados na construção e uso da~WordNet.Br. A
+reunião no final de julho, foi decidido o deslocamento do repositório da~\wnbr\
+do atual servidor, que é de acesso privado no~\nilc, para o servidor de acesso
+público no~GitHub\footnote{\url{https://github.com/}}. Essa iniciativa busca
+promover a divulgação do projeto e, sobretudo, dos resultados, à medida que
+forem sendo consolidados, bem como promover a comunicação entre os
+pesquisadores e demais interessados na construção e uso da~\wnbr. A
 figura~\ref{github:repositorio} mostra a interface de um repositório
 configurado no~GitHub.
 
@@ -180,21 +183,21 @@ Além disso, o GitHub possui um serviço de Wiki~(figura~\ref{github:wiki}) e um
 sistema de comunicação de \en{\textit{bugs}}, ou seja, erros ou problemas
 (figura~\ref{github:bugtracker}).
 
-%% Imagem da wiki do Github
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=.9\textwidth]{img/wiki.png}
-  \caption{A Wiki fornecida pelo GitHub pode conter a documentação do projeto}
-  \label{github:wiki}
-\end{figure}
-
-%% Imagem do bugtracker do GitHub
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=.9\textwidth]{img/bugtracker.png}
-  \caption{O \en{\textit{bug tracker}} fornecido pelo GitHub pode ajudar a resolver problemas na WordNet.Br}
-  \label{github:bugtracker}
-\end{figure}
+ %% Imagem da wiki do Github
+ \begin{figure}[h]
+   \centering
+   \includegraphics[width=.9\textwidth]{img/wiki.png}
+   \caption{A Wiki fornecida pelo GitHub pode conter a documentação do projeto}
+   \label{github:wiki}
+ \end{figure}
+ 
+ %% Imagem do bugtracker do GitHub
+ \begin{figure}[h]
+   \centering
+   \includegraphics[width=.9\textwidth]{img/bugtracker.png}
+   \caption{O \en{\textit{bug tracker}} fornecido pelo GitHub pode ajudar a resolver problemas na \wnbr}
+   \label{github:bugtracker}
+ \end{figure}
 
 A área de ajuda do GitHub\footnote{\url{https://help.github.com/}} possui uma
 página explicando a configuração necessária para acessar os repositórios

@@ -1,4 +1,3 @@
-\pagebreak
 \chapter{Discussão}
 
 % Introdução à terminologia
@@ -7,18 +6,20 @@ inglês, nem sempre ocorre um alinhamento direto, devido às especificidades de
 cada uma das línguas e, sobretudo, às lacunas lexicais que são constatadas
 durante o processo de análise.
 
-%\enlargethispage{\baselineskip}
 Segundo~\citeonline{peters}, há seis tipos de relações interlinguais. O
-alinhamento direto é chamado~\eqsyn. As outras relações mais importantes
-são~\cite[p.~225, tradução livre]{peters}:
+alinhamento direto é chamado~\eqsyn, ou seja, quando o par de synsets que estão
+sendo alinhados (do português e inglês) equivalem-se plenamente do ponto na
+dimensão semântico-conceitual. Em outras palavras: um synset do português
+corresponde, de modo preciso, a um único \ili. As outras relações mais
+importantes são~\cite[p.~225, tradução livre]{peters}:
 
 	\begin{itemize}
-        \item \eqnsyn\ quando um sentido corresponde a vários \ili s
-          simultaneamente;
-        \item \eqhyper\ quando um sentido é mais específico que qualquer \ili\
-          disponível;
-        \item \eqhypo\ quando um sentido pode ser ligado apenas a \ili s mais
-          específicos.
+        \item \eqnsyn\ quando um synset do português corresponde a vários \ili s
+        simultaneamente;
+        \item \eqhyper\ quando um synset do português corresponde a um \ili\
+        com sentido mais geral;
+        \item \eqhypo\ quando um synset do português corresponde a um \ili\ com
+        sentido mais específico.
 	\end{itemize}
 
 % Exemplos de alinhamento direto
@@ -36,10 +37,10 @@ da \wnpr. Nesse caso, o synset reveste lexicalmente o conceito
 português brasileiro, existem ao menos dois possíveis synsets que revestem esse
 conceito: \synset{escova} e \synset{pincel}. A dificuldade deriva do fato que,
 em português, o conceito é bipartido em função do uso das escovas e pincéis;
-podemos pensar que escovas \emph{limpam} ao passo que pincéis \emph{espalham}
-(tinta, claras de ovos etc.). No inglês, essa diferenciação conceitual é
-lexicalizada por synsets contendo itens léxicos complexos: \synset{\en{cleaning
-brush}} e \synset{\en{paint brush}}.
+podemos pensar que escovas \textbf{limpam} ao passo que pincéis
+\textbf{espalham} (tinta, claras de ovos etc.). No inglês, essa diferenciação
+conceitual é lexicalizada por synsets contendo itens léxicos complexos:
+\synset{\en{cleaning brush}} e \synset{\en{paint brush}}.
 
 Outro tipo de problema decorre de possíveis problemas na formação dos synsets
 da \wnpr. Esse é o caso de \synset{\en{bitmap, electronic image}}. Aqui é
@@ -80,7 +81,7 @@ qualquer~\ili\ disponível, como ilustrado na figura~\ref{caipirosca}.
 
 	\begin{figure}[!h]
 	\centering
-	\begin{tikzpicture}[scale=2]
+	\begin{tikzpicture}[scale=2.5]
 	    \matrix [column sep=3em,row sep=1em]
 	    {
 	    \node (a) [normal] {WN.Br}; & \node (b) [superset] {WN.Pr}; \\
@@ -100,7 +101,7 @@ temos, por fim, o alinhamento por~\eqhypo, exemplificado na figura~\ref{dedo}.
 
 	\begin{figure}[h]
 	\centering
-	\begin{tikzpicture}[scale=2]
+	\begin{tikzpicture}[scale=2.5]
 	    \matrix [column sep=3em,row sep=1em]
 	    {
 	    & \node (b caption) {\parbox{3cm}{\centering\textbf{\{finger\}}\\\small\textit{``any of the terminal members of the hand (sometimes excepting the thumb)''}}};  \\

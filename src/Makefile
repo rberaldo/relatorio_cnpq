@@ -34,6 +34,7 @@ clean:
 	$(RM) $(DOC).tex.bak
 	$(RM) $(DOC).bbl
 	$(RM) ../bin/$(DOC).pdf
+	$(RM) $(DOC).pdf
 	$(RM) $(DOC).tex~
 	$(RM) $(DOC).bib~
 	$(RM) Makefile~

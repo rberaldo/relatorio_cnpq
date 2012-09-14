@@ -37,6 +37,12 @@
 % Synset
 \newcommand{\synset}[1]{\{~\textit{#1}~\}}
 
+% Nomeação das tabelas
+\addto\captionsportuguese{%
+  \renewcommand{\tablename}%
+    {Quadro}%
+}
+
 \begin{document}
 \frenchspacing
 %\OnehalfSpacing
@@ -75,8 +81,9 @@
 \bibliography{bibliography}
 
 %% Apêndices e Anexos
-\renewcommand{\chaptername}{Annex}
+\renewcommand{\chaptername}{Apêndice}
 \include{tabelas}
+\renewcommand{\chaptername}{Anexo}
 \include{planos}
 
 \end{document}
