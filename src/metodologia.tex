@@ -3,8 +3,8 @@
 Nessa seção listaremos os fundamentos teórico-aplicados utilizados na análise
 dos synsets, bem como elucidaremos as estratégias e convenções dessa análise.
 Esses dois aspectos da metodologia do projeto permitem o estabelecimento de um
-estilo padrão para os synsets da WordNet.Br. Também discutiremos a
-implementação do Git~\cite{git}, software que foi selecionado para otimizar o
+estilo padrão para os synsets da WordNet.Br. Também discutiremos, na sequência,
+a implementação do Git~\cite{git}, software que foi selecionado para otimizar o
 armazenamento e o gerenciamento dos diferentes tipos de arquivo que são gerados
 na execução das atividades de construção da WordNet.Br.
 
@@ -19,11 +19,11 @@ suprida com o estudo dos textos da Bibliografia Básica.
 Destacamos alguns textos fundamentais, como~\citeonline{fellbaum}, que descreve
 minuciosamente a WN.Pr, e~\citeonline{vossen}, uma edição especial do periódico
 \en{\textit{Computers and the Humanities}}, que discute as dificuldades e
-estratégias na construção da EuroWordNet, uma mega-WordNet multilíngue que
-associa diferentes wordnets em construção para as línguas da União Européia.
+estratégias na construção da EuroWordNet, uma mega-WordNet multilíngue, que
+associa diferentes wordnets em construção para as línguas da União Europeia.
 Incluímos nessa lista~\citeonline{riemer}, que fornece o embasamento teórico
 que precedeu àquele dos textos acima, discutindo teorias e conceitos da
-semântica (grasso e lexical) que se provaram bastante úteis na compreensão das
+semântica (geral e lexical) que se provaram bastante úteis na compreensão das
 wordnets, em especial o capítulo~8.
 
 \section{Estratégias de execução}
@@ -101,23 +101,10 @@ Procedimentos:
 
 \section{Estratégia de gerenciamento dos arquivos}
 
-% Aqui vão as coisas sobre o Git. Primeiro, usar o que está no resumo da
-% apresentação do~\textsc{cic}. Isso deve introduzir o Git, sua motivação e
-% uso, e brevemente sua história. Depois, devo discutir a abertura do projeto
-% (transferido de um servidor privado a um servidor particular, \en{wording}
-% que o Bento indicou). Finalmente, devo descrever os passos para utilizar o
-% GitHub.  Talvez umas imagens no Windows, talvez algo mais técnico no linux,
-% talvez ambos. Também posso discutir com o Bento que essas instruções podem
-% mudar com o tempo, então seria muito mais interessante dar um link para o
-% artigo no GitHub que descreve a instalação no Windows, OS~X e GNU\slash
-% Linux.  Acredito, pessoalmente, que essa deve ser a melhor solução.
-% 
-% Comentar, aqui ou elsewhere, que o Git será apresentado no~\textsc{cic}.
-
 A dimensão do desafio que é gerenciar a base de arquivos da~\wnbr\ pode ser
-apreciada considerando-se que, entre~2010 e~2012, produzidos e revistos certa
-de~4100 arquivos, correspondendo ao mesmo número de synsets produzidos e
-alinhados. Cinco bolsistas de~\textsc{ic} supervisionados pelo coordenador
+apreciada considerando-se que, entre~2010 e~2012, foram produzidos e revistos
+certa de~4100 arquivos, correspondendo ao mesmo número de synsets produzidos e
+alinhados. Cinco bolsistas de~\textsc{ic}, supervisionados pelo coordenador,
 estiveram envolvidos nas tarefas, que significaram a exploração de diferentes
 análises até a escolha final de cada synset considerado ideal para configurar
 na base da~\wnbr; análises cujos históricos foram documentados para que toda e
@@ -138,15 +125,15 @@ versões de arquivos~\cite{chacon}, que deve viabilizar:
     interferir na integridade dos mesmos, pois trabalha com uma cópia e seu
     acesso é restrito no servidor;
   \item A marcação e o resgate de uma versão do arquivo que registra o synset e
-    o seu alinhamento considerador ideais;
+    o seu alinhamento considerados ideais;
   \item A consolidação da base da~\wnbr.
 \end{enumerate}
 
-Cumpre destacar que um Sistema de Controle de Versões~(SCV) resolve todos esses problemas,
-permitindo ao usuário reverter seus arquivos a um estado anterior, reverter o
-projeto inteiro a um estado anterior, comparar as mudanças ao longo do tempo,
-ver quem foi o último a modificar os arquivos, e recuperar arquivos que foram
-comprometidos ou deletados por acidente\footnote{\citeonline{chacon}:
+Cumpre destacar que um Sistema de Controle de Versões~(SCV) resolve todos esses
+problemas, permitindo ao usuário reverter seus arquivos a um estado anterior,
+reverter todo seu trabalho a um estado anterior, comparar as mudanças ao longo
+do tempo, ver quem foi o último a modificar os arquivos, e recuperar arquivos
+que foram comprometidos ou apagados por acidente\footnote{\citeonline{chacon}:
 \url{http://git-scm.com/book/en/Getting-Started-About-Version-Control}}.
 
 A escolha do sistema de controle de versões~Git foi motivada por ser rápido,
@@ -178,7 +165,7 @@ configurado no~GitHub.
   \label{github:repositorio}
 \end{figure}
 
-No GitHub, é possível adicionar pessoas a um projeto, para que possam
+No GitHub é possível adicionar pessoas a um projeto, para que possam
 contribuir ativamente; o único pré-requisito é que possuam uma conta no GitHub.
 Também é possível aceitar alterações e melhorias em geral (\en{\textit{“pull
 requests”}}) de outros usuários do GitHub. Desse modo, tem-se o controle de
